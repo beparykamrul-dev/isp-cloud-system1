@@ -1,1 +1,6 @@
-# isp-cloud-system1
+# ISP CLOUD SYSTEM
+
+Run:
+
+chmod +x deploy.sh
+./deploy.sh
