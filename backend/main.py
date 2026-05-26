@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from auth import check_user
 
 app = FastAPI(title="ISP CLOUD SYSTEM")
 
@@ -14,16 +13,8 @@ def home():
 def dashboard():
     return {
         "online_users": 120,
-        "offline_users": 25,
-        "revenue": 50000
-    }
-
-@app.post("/login")
-def login(username: str, password: str):
-
-    user = check_user(username, password)
-
-    return {
-        "status": "SUCCESS",
-        "role": user["role"]
+        "offline_users": 20,
+        "revenue": 55000,
+        "database": "CONNECTED",
+        "redis": "CONNECTED"
     }
