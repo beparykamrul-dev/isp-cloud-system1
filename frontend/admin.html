@@ -1,9 +1,28 @@
 <html>
 <body>
 
-<h1>ISP ADMIN PANEL</h1>
+<h1>MAIN ADMIN PANEL</h1>
 
-<p>SYSTEM READY</p>
+<button onclick="load()">LOAD DASHBOARD</button>
+
+<pre id="out"></pre>
+
+<script>
+
+function load(){
+
+fetch("http://localhost:8000/dashboard")
+.then(r=>r.json())
+.then(d=>{
+
+document.getElementById("out").innerText =
+JSON.stringify(d,null,2)
+
+})
+
+}
+
+</script>
 
 </body>
 </html>
