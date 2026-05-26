@@ -1,0 +1,4 @@
+DATABASE = {
+    "users": [],
+    "billing": []
+}
